@@ -1,0 +1,123 @@
+.texts{
+    height: auto;
+    width: 100%;
+}
+.tetxs-row{
+    height: auto;
+    width: 100%;
+}
+
+.text-col-tent{
+    padding: 0 15px 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.texts-title{
+    width: 100%;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    color: #000000;
+    letter-spacing:0.1em;
+}
+.texts-news{
+    width: 100%;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+}
+.texts-news-right{
+    display: flex;
+    justify-content: flex-end;
+}
+.texts-txt {
+    padding-top: 15px;
+}
+.texts-txt blockquote{
+    background: #EFEFEF;
+    position: relative;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.texts-txt blockquote::before{
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: #20CEFB;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.texts-txt strong{
+    font-weight: 700;
+}
+.texts-txt table{
+    width: 100%;
+    border-collapse:collapse;
+    margin-bottom: 10px;
+}
+ .texts-txt thead{
+    background: #EFEFEF;
+}
+.texts-txt table, td, th
+  {
+  border:1px solid #C6C8C8;
+  }
+.texts-txt ol li,ul li{
+    padding: 5px;
+    box-sizing: border-box;
+}
+.texts-txt tbody{
+    background: #F7F6F6;
+}
+.texts-txt th{
+    padding: 10px;
+    text-align: center;
+    vertical-align:bottom;
+}
+.texts-txt td{
+    padding: 10px;
+    text-align: center;
+    vertical-align:bottom;
+} 
+.texts-txt pre{
+    background: #F7F7F7;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.texts-txt h1{
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: 1px solid #ECEDED;
+}
+.texts-txt h2{
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #ECEDED;
+}
+.texts-txt h3{
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #ECEDED;
+}
+.texts-txt h4{
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid #ECEDED;
+}
+.texts-txt h5{
+    font-size: 14px;
+    font-weight: 300;
+    border-bottom: 1px solid #ECEDED;
+}
+.texts-txt h6{
+    font-size: 12px;
+    font-weight: 300;
+    border-bottom: 1px solid #ECEDED;
+}
+

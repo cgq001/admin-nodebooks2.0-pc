@@ -1,0 +1,29 @@
+.summary{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.summary-title{
+    height: 50px;
+    font-size: 22px;
+    color: #F320F9;
+    padding-left: 20px;
+
+}
+.summary-content{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.summary a{
+    color: #A4A5A6;
+}
+.pages{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.pages li{
+    padding: 0;
+}

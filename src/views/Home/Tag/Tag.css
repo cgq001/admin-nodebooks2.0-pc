@@ -1,0 +1,11 @@
+.tags{
+    padding: 20px;
+    box-sizing: border-box;
+}
+.tags-title{
+    height: 70px;
+    font-size: 26px;
+}
+.tags-timeline a{
+    color: #A4A5A6;
+}

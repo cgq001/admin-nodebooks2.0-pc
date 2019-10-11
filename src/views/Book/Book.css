@@ -1,0 +1,88 @@
+.book{
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.book-left,.book-left img{
+    width: 140px;
+    height: 160px;
+}
+.book-right{
+    height: 160px;
+    width: 100%;
+    padding-left: 20px;
+    position: relative;
+}
+.book-right-head{
+    height: 50px;
+    font-size: 20px;
+    text-align: left;
+    line-height: 50px;
+}
+.book-right-title{
+    font-size: 12px;
+    text-align: left;
+    line-height: 30px;
+}
+.book-right-time{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.book-list{
+    width: 100%;
+    height: auto;
+    padding: 20px 30px 15px 15px;
+}
+.book-list-title{
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #B8B8B9;
+}
+.book-list-ul{
+    padding: 20px 0 0 20px;
+}
+
+.book-list-ul .book-list-li:not(:last-child) .book-list-li-left::after{
+    content: '';
+    left: 13px;
+    top: 28px;
+    width: 0px;
+    height: 37px;
+    background: #B8B8B9;
+    border-left: 1px solid #B8B8B9;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+
+}
+.book-list-li{
+    height: 50px;
+    display: flex;  
+    padding: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.book-list-li:hover{
+    background: #F4F8FD;
+    color: #3A99F8;
+}
+.book-list-li-left{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #B8B8B9;
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+}
+.book-list-li-right{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}

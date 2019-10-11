@@ -1,0 +1,23 @@
+.experience{
+    width: 100%;
+}
+.timelist{
+    margin-bottom: 20px;
+}
+.timelist-head{
+    color: black;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.timelist .timelist-title{
+    color: #7D7D7D;
+    font-size: 12px;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+.timelist .timelist-time{
+    color: #5B5B5C;
+    font-size: 12px;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
