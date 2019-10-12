@@ -10,7 +10,8 @@ export default class Leftaside extends Component {
         super(props);
         this.state={
             hotList:[],
-            tableList:[]
+            tableList:[],
+            admins:{}
         }
     }
     componentDidMount(){
@@ -37,6 +38,15 @@ export default class Leftaside extends Component {
                     })
                 }
             })
+        
+        axios.get('searchMsgAdminsLeft')
+            .then(res=>{
+                if(res.data.code === 0){
+                    this.setState({
+                        admins:res.data.data
+                    })
+                }
+            })
     }
     render() {
         return (
@@ -44,17 +54,17 @@ export default class Leftaside extends Component {
                 {/* 头像 */}
                 <div className="leftaside-header">
                     <div className='leftaside-header-imgs'>
-                        <img src={imgs}></img>
+                        <img src={this.state.admins.imgs}></img>
                     </div>
                     <div className='leftaside-header-next'>
                         <div>
                             <i className='iconfont icon-github'></i>
-                            <a href='https://github.com/cgq001/' target='blank'>GitHub</a>
+                            <a href={this.state.admins.github} target='blank'>GitHub</a>
                             
                         </div>
                         <div>
                             <i className='iconfont icon-biji'></i>
-                            <a href='https://juejin.im/user/5b3427cae51d4558b92414af/posts' target='blank'>掘金</a>
+                            <a href={this.state.admins.juejin} target='blank'>掘金</a>
                         </div>
                     </div>
                 </div>

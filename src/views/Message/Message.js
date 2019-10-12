@@ -9,7 +9,7 @@ const { TextArea } = Input;
 const ExampleComment = ({ content,datetime,author,avatar,children }) => (
   <Comment
     actions={[<span key="comment-nested-reply-to">{moment(datetime).format('YYYY-MM-DD HH:mm:SS')}</span>]}
-    author={<a>{author}</a>}
+    author={author}
     avatar={
       <Avatar
         src={avatar || 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
@@ -34,11 +34,20 @@ export default class Message extends Component {
       value:'',
       rows: 2,
       page: 1,
-      list:[]
+      list:[],
+      admins:{}
     }
   }
   componentDidMount=()=>{
     let This= this
+        axios.get('searchMsgAdmins')
+              .then(res=>{
+                if(res.data.code === 0){
+                  This.setState({
+                    admins:res.data.data
+                  })
+                }
+              })
         axios.get('searchMsg',{
             params:{
               rows:this.state.rows,
@@ -52,7 +61,7 @@ export default class Message extends Component {
               })
 
           }
-          console.log(res.data.data)
+          // console.log(res.data.data)
         })
        
        store.subscribe(()=>{
@@ -117,11 +126,23 @@ export default class Message extends Component {
                   author={item.name} 
                   avatar={item.imgage}
                   key={index}>
+                      {item.adminmsg && (
+                         <ExampleComment 
+                         content={item.adminmsg}  
+                         datetime={item.admindata}
+                         author={this.state.admins.name} 
+                         avatar={this.state.admins.nameimgs}
+                         key={index}>
+                        </ExampleComment>
+                      )}
                   </ExampleComment>
                 )
               })}
-                <div >
-                  <TextArea
+                <div>
+                 {this.state.admins.msgoffs && (
+                   <div>
+                      <TextArea
+                          
                         className="messages-txt"
                         value={this.state.value}
                         onChange={this.onChange}
@@ -131,6 +152,8 @@ export default class Message extends Component {
                       <div className='message-btns-box'>
                           <Button className='message-btns' onClick={this.submits} type="primary">发表留言</Button> 
                       </div>
+                    </div>
+                 )}
                      
                 </div>
             </div>
