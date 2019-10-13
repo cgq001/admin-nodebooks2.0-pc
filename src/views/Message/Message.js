@@ -3,7 +3,7 @@ import store from '../../store/index'
 import moment from 'moment'
 import React, { Component } from 'react'
 import './message.css'
-import { Comment, Avatar, Input , Button, message} from 'antd';
+import { Comment, Avatar, Input , Button, message, Pagination} from 'antd';
 const { TextArea } = Input;
 
 const ExampleComment = ({ content,datetime,author,avatar,children }) => (
@@ -35,7 +35,8 @@ export default class Message extends Component {
       rows: 2,
       page: 1,
       list:[],
-      admins:{}
+      admins:{},
+      total:0
     }
   }
   componentDidMount=()=>{
@@ -55,13 +56,14 @@ export default class Message extends Component {
             }
         })
         .then(res=>{
+         // console.log(res.data)
           if(res.data.code === 0){
               This.setState({
-                list:res.data.data
+                list:res.data.data,
+                total: res.data.total
               })
 
           }
-          // console.log(res.data.data)
         })
        
        store.subscribe(()=>{
@@ -79,6 +81,28 @@ export default class Message extends Component {
     this.setState({ value });
 
   }
+  changePage=(page,all)=>{
+    let This= this
+    this.setState({
+        page:page
+    })
+    axios.get('searchMsg',{
+        params:{
+          rows:this.state.rows,
+          page: page
+        }
+    })
+    .then(res=>{
+      
+      if(res.data.code === 0){
+          This.setState({
+            list:res.data.data,
+            total: res.data.total
+          })
+
+      }
+    })
+}
   submits=()=>{
      
       if(this.state.value.length<=0){
@@ -138,7 +162,7 @@ export default class Message extends Component {
                   </ExampleComment>
                 )
               })}
-                <div>
+                <div className='msgBoxs'>
                  {this.state.admins.msgoffs && (
                    <div>
                       <TextArea
@@ -155,6 +179,9 @@ export default class Message extends Component {
                     </div>
                  )}
                      
+                </div>
+                <div className="pages">
+                    <Pagination defaultCurrent={this.state.page} defaultPageSize={this.state.rows} total={this.state.total} onChange={this.changePage} />
                 </div>
             </div>
         )

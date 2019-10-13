@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 .messages-txt{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .message-btns-box{
     display: flex;
@@ -13,4 +13,7 @@
 }
 .message-btns{
     margin-right: 15px;
+}
+.msgBoxs{
+    margin-bottom: 20px;
 }

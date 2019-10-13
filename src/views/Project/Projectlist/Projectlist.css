@@ -73,6 +73,9 @@
     height: 100%;
     cursor: pointer;
 }
+.projectlist-foot-lis a{
+    color: #595959;
+}
 .projectlist-foot-lis span{
     margin-left: 8px;
 }

@@ -9,20 +9,29 @@
 .leftaside-hot .iconfont{
     color: #969696;
 }
+.leftaside-hot-list-ul{
+    padding-left: 5px;
+    box-sizing: border-box;
+    transition: 0.9s;
+}
 .leftaside-hot-list-ul li{
     width: 100%;
     height: 35px;
     padding-left: 15px;
     box-sizing: border-box;
-    
+    text-overflow: ellipsis;
     font-size: 14px;
     cursor: pointer;
+    transition: 0.9s;
 }
 .leftaside-hot-list-ul li:hover{
     background: #EFEFFF; 
+    box-shadow: -1px 1px 2px #C9C8C9;
+    transform: translateY(2px);
 }
-.leftaside-hot-list-ul a:hover{
-    color: #4BA4FD;
+.leftaside-hot-list-ul li:hover a{
+    /* color: #4BA4FD; */
+    color: #EE12F9;
 }
 .leftaside-hot-list-ul a{
     color: #969696;
@@ -55,6 +64,7 @@
     height: 50px;
     width: 100%;
     line-height: 50px;
+    font-size: 20px;
     display: flex;
     justify-content: space-around;
 }

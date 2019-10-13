@@ -39,6 +39,7 @@
     position: absolute;
     left: 20px;
     bottom: 0px;
+    color: #575757;
 }
 .manuallist:hover{
     background: #F0F6FC;
