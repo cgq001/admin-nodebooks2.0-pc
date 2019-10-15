@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import './cssResert.css'
-import { BrowserRouter as Router, Route} from "react-router-dom";
-
+import { HashRouter as Router, Route} from "react-router-dom";
+//BrowserRouter
 import About from './views/About/About'
 import Booktxt from './views/Book/Booktxt/Booktxt'
 import Book from './views/Book/Book'

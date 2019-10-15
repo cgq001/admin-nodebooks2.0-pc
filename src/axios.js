@@ -7,7 +7,7 @@ import axios from 'axios'
 
 
 let instance = axios.create({
-    baseURL: 'http://127.0.0.1:5002/pc/',
+    baseURL: 'http://127.0.0.1:5002/pc/',  //'http://api.caoxiaoyuan.cn/pc/'
     timeout: 5000
   });
 

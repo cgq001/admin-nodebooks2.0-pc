@@ -22,8 +22,8 @@ export default class Summary extends Component {
             }
         })
         .then(res=>{
-            if(res.data.code === 0){
-               // console.log(res.data.data)
+            if(res.data.code === 0 && res.data.data.length>0){
+           
                 let dataStr=res.data.data
                 for(let i=0;i<dataStr.length;i++){
                     dataStr[i].year=moment( dataStr[i].data).format('YYYY')
