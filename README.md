@@ -1,7 +1,7 @@
 ##  新博客2.0 PC端展示代码
 
 
-PC展示端预览地址: http://www.nodebook.cn/#/
+PC展示端预览地址: http://www.nodebook.top/#/
 
 ### 初始化
 ```javascript
