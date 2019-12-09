@@ -1,7 +1,7 @@
 ##  新博客2.0 PC端展示代码
 
-管理后台预览地址: http://admin.caoxiaoyuan.cn/#/
-PC展示端预览地址: http://www.caoxiaoyuan.cn/#/
+
+PC展示端预览地址: http://www.nodebook.cn/#/
 
 ### 初始化
 ```javascript
